@@ -19,8 +19,27 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
   </head>
   <body>
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Watch our Video</h4>
+          </div>
+          <div class="modal-body">
+            <iframe width="560" height="315" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-campaign" href="https://www.indiegogo.com/projects/help-make-mirabeau-bridge-a-worldwide-hit-music-toronto#/" target="_blank">Support Us on Indiegogo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
     <div class="container">
       <div class="row">
         <div class="col-md-5">
@@ -29,7 +48,6 @@
         </div>
 
         <div class="col-md-7">
-
           <section class="main">
             <h1>Support 'Mirabeau Bridge'<br />With Just 3 Clicks</h1>
             <p>Hey passionate music lover-:</p>
@@ -45,7 +63,6 @@
                   <h2>1. Share on Facebook</h2>
                   <p>Share the Campaign with your friends</p>
                 </div>
-
                 <a class="btn btn-share" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.indiegogo.com/projects/help-make-mirabeau-bridge-a-worldwide-hit-music-toronto%23/" target="_blank"><i class="fa fa-facebook"></i> Share</a>
               </div>
               <div class="col-md-4">
@@ -53,7 +70,6 @@
                   <h2>2. Post on Twitter</h2>
                   <p>Hook your following up</p>
                 </div>
-
                 <a class="btn btn-tweet " href="https://twitter.com/share" data-text="Testing..." data-show-count="false" target="_blank"><i class="fa fa-twitter"></i> Tweet</a>
               </div>
               <div class="col-md-4">
@@ -61,8 +77,7 @@
                   <h2>3. Watch our Video</h2>
                   <p>Thank you in advance for backing the Campaign</p>
                 </div>
-
-                <a class="btn btn-play" href="https://www.indiegogo.com/projects/help-make-mirabeau-bridge-a-worldwide-hit-music-toronto#/" target="_blank"><i class="fa fa-youtube"></i> Play</a>
+                <a class="btn btn-play" href="#" data-toggle="modal" data-target="#myModal" target="_blank"><i class="fa fa-youtube"></i> Play</a>
               </div>
             </div>
           </section>
@@ -73,7 +88,18 @@
     <!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      $('.btn-play').click(function () {
+        var src = 'https://www.youtube.com/embed/x7ZhUo3swpU?autoplay=1';
+        //$('#myModal').modal('show');
+        $('#myModal iframe').attr('src', src);
+      });
+
+      $('#myModal button').click(function () {
+        $('#myModal iframe').removeAttr('src');
+      });
+    </script>
   </body>
 </html>
