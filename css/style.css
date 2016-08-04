@@ -91,3 +91,14 @@ section.sharing p {
 
   color: #333;
 }
+
+.btn-campaign {
+  background-color: #98be53;
+
+  color: #333;
+}
+
+.modal iframe {
+  max-width: 100%;
+  width: 100% !important;
+}
