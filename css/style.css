@@ -35,6 +35,7 @@ section.sharing {
 section.sharing .row{
   align-items: stretch;
   display: flex;
+  flex-wrap: flex;
 
   text-align: center;
 }
