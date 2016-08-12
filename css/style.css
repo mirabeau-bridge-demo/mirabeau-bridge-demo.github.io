@@ -26,10 +26,12 @@ section.sharing {
   box-sizing: border-box;
 }
 
-section.main p,
-section.sharing {
-  margin-left: 130px;
-  margin-right: 80px;
+@media (min-width: 992px) {
+  section.main p,
+  section.sharing {
+    margin-left: 130px;
+    margin-right: 80px;
+  }
 }
 
 section.sharing .row{
